@@ -26,7 +26,7 @@ scene.onHitWall(SpriteKind.Player, function (sprite) {
     game.over(false, effects.confetti)
 })
 sprites.onOverlap(SpriteKind.object, SpriteKind.Player, function (sprite, otherSprite) {
-    info.changeScoreBy(1)
+    info.changeScoreBy(10000)
     joe.vy += -250
     trampo.setKind(SpriteKind.object)
     trampo.x += Math.randomRange(-70, 70)
@@ -69,22 +69,22 @@ f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f
 f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f 
 `)
 joe = sprites.create(img`
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . f f f f f . . . . . 
-. . . . . f 7 7 7 7 7 f . . . . 
-. . . . f 7 7 1 1 1 7 7 f . . . 
-. . . . f 7 7 1 f 1 7 7 f . . . 
-. . . . f 7 7 7 7 7 7 7 f . . . 
-. . . . f 7 7 7 7 7 7 7 f . . . 
-. . . . f f f f f f f f f . . . 
-. . . . . f 2 2 2 2 2 f . . . . 
-. . . . . f 4 2 2 2 f . . . . . 
-. . . . . . f 5 2 4 f . . . . . 
-. . . . . . . f 4 5 f . . . . . 
-. . . . . . . f 5 f . . . . . . 
-. . . . . . . . f . . . . . . . 
+. . . . . f f f f f f f . . . . 
+. . . f f . . . . . . . f f . . 
+. . f . . . . . . . . . . . f . 
+. f . . . . . . . . . . . . . f 
+. f . . . . . . . . . . . . . f 
+. f . . . . . . . . . . . . . f 
+. f . . . . . . . . . . . . . f 
+. . f f f . . . . . . . . . f . 
+. . . f . . . . . . . . . f . . 
+. . . f . . . . . . . . . f . . 
+. . . . f . . . . . . . f . . . 
+. . . . . f . . . . . . f . . . 
+. . . . . . f . . . . f . . . . 
+. . . . . . f . . . . f . . . . 
+. . . . . . . f . . f . . . . . 
+. . . . . . . . f f . . . . . . 
 `, SpriteKind.Player)
 joe.ay = 10000
 trampo = sprites.create(img`
