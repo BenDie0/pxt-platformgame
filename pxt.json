@@ -1,7 +1,9 @@
 {
     "name": "platformgame",
     "dependencies": {
-        "device": "*"
+        "device": "*",
+        "color-coded-tilemap": "*",
+        "animation": "*"
     },
     "description": "",
     "files": [
@@ -9,7 +11,7 @@
         "main.ts",
         "README.md"
     ],
-    "preferredEditor": "tsprj",
+    "preferredEditor": "blocksprj",
     "testFiles": [
         "test.ts"
     ]
