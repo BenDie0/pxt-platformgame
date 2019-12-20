@@ -97,7 +97,7 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 `],
-    100,
+    50,
     false
     )
 })
@@ -122,7 +122,7 @@ controller.left.onEvent(ControllerButtonEvent.Released, function () {
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 `],
-    100,
+    50,
     false
     )
 })
@@ -147,7 +147,7 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 `],
-    100,
+    50,
     false
     )
 })
@@ -172,11 +172,12 @@ controller.right.onEvent(ControllerButtonEvent.Released, function () {
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 `],
-    100,
+    50,
     false
     )
 })
 let mySprite: Sprite = null
+scene.cameraFollowSprite(mySprite)
 tiles.setTilemap(tiles.createTilemap(
             hex`1000100003030303030303030303030303030303010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010102020202020202020202020202020202`,
             img`
@@ -220,4 +221,3 @@ mySprite = sprites.create(img`
 `, SpriteKind.Player)
 controller.moveSprite(mySprite)
 mySprite.setPosition(75, 112)
-mySprite.setVelocity(50, 50)
